@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Sushi - Catégories</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            MN
+            <span>SUSHI</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">Menu</a>
+            <a href="reservations.html">Réservation</a>
+            <a href="avis.html">Avis</a>
+            <a href="utilisateurs.html">Utilisateurs</a>
+            <a href="categories.html" class="active">Catégories</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Catégories</h1>
+            <p>
+                Gérez les catégories des produits du restaurant MN Sushi.
+                Chaque produit du menu est associé à une catégorie.
+            </p>
+        </section>
+
+        <section class="form-card">
+            <h2>Ajouter une catégorie</h2>
+
+            <form id="categorie-form">
+                <div class="form-group">
+                    <label for="nomcategorie">Nom de la catégorie</label>
+                    <input type="text" id="nomcategorie" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptioncategorie">Description</label>
+                    <textarea id="descriptioncategorie" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Ajouter</button>
+            </form>
+
+            <p id="categorie-message" class="message"></p>
+        </section>
+
+        <section class="table-section">
+            <h2 class="section-title">Liste des catégories</h2>
+
+            <div class="table-actions">
+                <button id="reload-categories" class="btn btn-secondary">Actualiser</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Catégorie</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="categories-body">
+                    <tr>
+                        <td colspan="4">Chargement des catégories...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/categories.js"></script>
+</body>
+
+</html>

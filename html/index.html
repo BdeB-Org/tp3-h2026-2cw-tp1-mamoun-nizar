@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Sushi - Accueil</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            MN
+            <span>SUSHI</span>
+        </a>
+
+        <nav>
+            <a href="index.html" class="active">Accueil</a>
+            <a href="produits.html">Menu</a>
+            <a href="reservations.html">Réservation</a>
+            <a href="avis.html">Avis</a>
+            <a href="utilisateurs.html">Utilisateurs</a>
+            <a href="categories.html">Catégories</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Bienvenue chez MN Sushi</h1>
+            <p>
+                Découvrez une sélection de sushis frais préparés avec soin.
+                Cette application Web permet de gérer le menu, les réservations,
+                les avis, les utilisateurs et les catégories du restaurant.
+            </p>
+
+            <div class="actions">
+                <a href="produits.html" class="btn">Voir le menu</a>
+                <a href="reservations.html" class="btn btn-secondary">Réserver une table</a>
+            </div>
+        </section>
+
+        <section class="card info-section">
+            <h2>Informations techniques</h2>
+            <p>
+                Ce projet utilise HTML, CSS et JavaScript pour le frontend. Les données
+                sont récupérées à partir d’une base de données Oracle avec ORDS.
+            </p>
+
+            <ul>
+                <li>Base de données : Oracle</li>
+                <li>API : Oracle REST Data Services</li>
+                <li>URL de l’API : <code>http://localhost:8080/ords/tp3</code></li>
+                <li>Tables utilisées : utilisateur, categorie, produit, reservation, avis</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
