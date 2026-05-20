@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Sushi - Réservations</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            MN
+            <span>SUSHI</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">Menu</a>
+            <a href="reservations.html" class="active">Réservation</a>
+            <a href="avis.html">Avis</a>
+            <a href="utilisateurs.html">Utilisateurs</a>
+            <a href="categories.html">Catégories</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Réservations</h1>
+            <p>
+                Gérez les réservations des clients selon la date, l’heure,
+                le nombre de personnes et le statut.
+            </p>
+        </section>
+
+        <section class="form-card">
+            <h2>Ajouter une réservation</h2>
+
+            <form id="reservation-form">
+                <div class="form-group">
+                    <label for="datereservation">Date de réservation</label>
+                    <input type="date" id="datereservation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="heurereservation">Heure de réservation</label>
+                    <input type="time" id="heurereservation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombrepersonne">Nombre de personnes</label>
+                    <input type="number" id="nombrepersonne" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Statut</label>
+                    <select id="status" required>
+                        <option value="">Choisir</option>
+                        <option value="en attente">En attente</option>
+                        <option value="confirmee">Confirmée</option>
+                        <option value="annulee">Annulée</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="commentaire">Commentaire</label>
+                    <textarea id="commentaire"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="utilisateur_idutilisateur">Utilisateur</label>
+                    <select id="utilisateur_idutilisateur" required>
+                        <option value="">Chargement...</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Ajouter</button>
+            </form>
+
+            <p id="reservation-message" class="message"></p>
+        </section>
+
+        <section class="table-section">
+            <h2 class="section-title">Liste des réservations</h2>
+
+            <div class="table-actions">
+                <button id="reload-reservations" class="btn btn-secondary">Actualiser</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Personnes</th>
+                        <th>Statut</th>
+                        <th>Commentaire</th>
+                        <th>Utilisateur</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reservations-body">
+                    <tr>
+                        <td colspan="8">Chargement des réservations...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/reservations.js"></script>
+</body>
+
+</html>

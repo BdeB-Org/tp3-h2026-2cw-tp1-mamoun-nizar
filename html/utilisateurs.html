@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Sushi - Utilisateurs</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            MN
+            <span>SUSHI</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="produits.html">Menu</a>
+            <a href="reservations.html">Réservation</a>
+            <a href="avis.html">Avis</a>
+            <a href="utilisateurs.html" class="active">Utilisateurs</a>
+            <a href="categories.html">Catégories</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Utilisateurs</h1>
+            <p>
+                Gérez les utilisateurs du restaurant MN Sushi. Cette page permet
+                d’ajouter, d’afficher et de supprimer les utilisateurs enregistrés.
+            </p>
+        </section>
+
+        <section class="form-card">
+            <h2>Ajouter un utilisateur</h2>
+
+            <form id="utilisateur-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="courriel">Courriel</label>
+                    <input type="email" id="courriel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="text" id="telephone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="motdepasse">Mot de passe</label>
+                    <input type="password" id="motdepasse" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Rôle</label>
+                    <select id="role" required>
+                        <option value="">Choisir</option>
+                        <option value="client">Client</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="datecreation">Date de création</label>
+                    <input type="date" id="datecreation" required>
+                </div>
+
+                <button type="submit" class="btn">Ajouter</button>
+            </form>
+
+            <p id="utilisateur-message" class="message"></p>
+        </section>
+
+        <section class="table-section">
+            <h2 class="section-title">Liste des utilisateurs</h2>
+
+            <div class="table-actions">
+                <button id="reload-utilisateurs" class="btn btn-secondary">Actualiser</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Courriel</th>
+                        <th>Téléphone</th>
+                        <th>Rôle</th>
+                        <th>Date création</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="utilisateurs-body">
+                    <tr>
+                        <td colspan="8">Chargement des utilisateurs...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/shared.js"></script>
+    <script src="../js/utilisateurs.js"></script>
+</body>
+
+</html>
